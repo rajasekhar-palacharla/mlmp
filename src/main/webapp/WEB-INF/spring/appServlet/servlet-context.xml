@@ -14,7 +14,7 @@ http://www.springframework.org/schema/mvc/spring-mvc-3.0.xsd">
 
 
 	  <!-- <context:property-placeholder location="file:../database.properties" /> --> 
-	 	 <context:property-placeholder location="file:///${CATALINA_HOME}/conf/database.properties"/>   
+	 	 <context:property-placeholder location="/WEB-INF/spring/appServlet/database.properties"/>   
 		
 	<context:component-scan base-package="com.mlm.*" />
 	<mvc:annotation-driven />
@@ -43,8 +43,8 @@ http://www.springframework.org/schema/mvc/spring-mvc-3.0.xsd">
 		<property name="dataSource" ref="dataSource" />
 		<property name="annotatedClasses">
 			<list>
-				<!-- <value>com.ari.model.WebUser</value>
-				<value>com.ari.bean.WebUserBean</value>
+				<value>com.mlm.model.WebUser</value>
+				<!-- <value>com.ari.bean.WebUserBean</value>
 				<value>com.ari.model.CSVInf</value>
 				<value>com.ari.model.CCReg</value>
 				<value>com.ari.model.CCRegUserCSVInfo</value>

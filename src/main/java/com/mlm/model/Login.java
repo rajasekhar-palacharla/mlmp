@@ -1,5 +1,6 @@
 package com.mlm.model;
 
+import org.hibernate.validator.constraints.NotEmpty;
 
 public class Login {
 

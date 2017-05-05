@@ -42,6 +42,17 @@ public class CommonController {
 		}
 		return new ModelAndView("login");
 	}
+	
+	@RequestMapping(value = "/tree", method = RequestMethod.GET)
+	public ModelAndView ShowTree(Model model) {
+		try {
+			Login login = new Login();
+			model.addAttribute("login", login);
+		} catch (Exception e) {
+
+		}
+		return new ModelAndView("ViewGroups");
+	}
   
 
 
